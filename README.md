@@ -25,11 +25,13 @@ Feel free to check out my project.
 Users should be able to:
 
 - View the optimal layout depending on their device's screen size
+- Click on every link and be able to move around the page in a user friendly way.
 
 ### Screenshot
 
 ![](screenshots/desktop.png)
 ![](screenshots/mobile.png)
+![](screenshots/tablet.png)
 
 
 ### Links
@@ -43,22 +45,21 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- FlexBox
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Learned new and better ways to use the view port measures for a better responsive design.
 
-To see how you can add code snippets, see below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+header {
+  height: 100svh;
 }
 ```
 ```js
@@ -68,8 +69,7 @@ const proudOfThisFunc = () => {
 ```
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+The next step will be finish the other pages of the web page.
 
 ### Useful resources
 
