@@ -1,0 +1,176 @@
+$fontPrincipal: 'Gambarino', serif;
+$darkPink: #594347;
+$lightPink: #F2D5DB;
+$mediumPink: #F2AEC1;
+$regularPink: #F2ACC6;
+
+// *** Cover Styles
+
+main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 3em;
+
+  height: 90svh;
+
+  div.left, div.right {
+    display: none;
+  }
+
+  .music-player-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; 
+
+    min-width: 18em;
+
+    div.image-container {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 80%;
+        border-radius: 8px;
+      }
+    }
+
+    div.music-player {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      
+      width: 90%;
+    
+      padding: .5em 0;
+      border-radius: 12px;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background-color: rgba(245, 232, 232, 0.5);
+
+      .song-info {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+        .song-title {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+
+        .artist-name {
+          font-size: 1.5em;
+          color: #948083;
+        }
+      }
+      .time-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        font-weight: bold;
+        color: #948083;
+
+        input[type=range]{
+          appearance: none;
+          width: 100%;
+          background-color: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+          appearance: none;
+          border: none;
+          background: transparent;
+        }
+
+        input[type=range]::-moz-range-thumb {
+          appearance: none;
+          border: none;
+          background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 8.4px;
+          cursor: pointer;
+          background-color: $darkPink;
+          border-radius: 8px;
+          border: none;
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+          background: rgb(20, 19, 19);
+        }
+
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 8.4px;
+          cursor: pointer;
+          background-color: $darkPink;
+          border-radius: 8px;
+          border: none;
+        }
+
+        input[type=range]:focus::-moz-range-track{
+          background-color: #000000;
+        }
+
+        input[type=range]:focus {
+          outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+
+        input[type=range]::-ms-track {
+          width: 100%;
+          cursor: pointer;
+          /* Hides the slider so custom styles can be added */
+          background: transparent; 
+          border-color: transparent;
+          color: transparent;
+        }
+
+      }
+      .buttons {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    
+  }
+}
+
+@media (min-width:36em ){
+  main {
+    padding: 0;
+  
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6em;
+
+    height: 75svh;
+
+    div.left, div.right {
+      display: flex;
+    }
+  }
+}
+
+

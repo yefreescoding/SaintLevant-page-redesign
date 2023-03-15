@@ -18,9 +18,9 @@
     <nav id="desktop-nav-bar">
       <a href="">ABOUT</a>
       <a href="">MUSIC</a>
-      <h1>
+      <h1 class="page-mobile-title">
         Saint Levant
-        <span class="h1__sub-title">Lover Boy Levant</span>
+        <span class="sub-title">Lover Boy Levant</span>
       </h1>
       <a href="">TOUR</a>
       <a href="">BOOKING</a>
@@ -43,7 +43,7 @@
       </ul>
       <h1 class="page-mobile-title">
         Saint Levant
-        <span class="h1__sub-title">Lover Boy Levant</span>
+        <span class="sub-title">Lover Boy Levant</span>
       </h1>
     </nav>
     <!--Logo Music. *** DO NOT FORGET TO CHANGE THE WIDTH IN CSS ***-->
@@ -54,7 +54,51 @@
 <!-- *** Where the important content of the web page goes. Follow the design instructions*** -->
   <main class="page-container">
     <!-- ** Start for the music DIV container.-->
-    <div id="music-player-container">
+    <div class="music-player-container left">
+      <!--Image section of the container-->
+      <div class="image-container">
+        <img src="resources/images/hero/Screenshot 2023-03-13 at 11.55.51.png" alt="ALbum Cover image. This is the new Saint Levant album.">
+      </div>
+      <!--Music Player section of the container-->
+      <div class="music-player">
+        <!--Info for the song-->
+        <div class="song-info">
+          <span class="song-title">
+            FaceTime
+          </span>
+          <span class="artist-name">
+            Saint Levant
+          </span>
+        </div>
+        <!--Time section of the song-->
+        <div class="time-bar">
+          <span class="time-pass">
+            1:29
+          </span>
+          <div class="bar">
+            <input type="range" min="0" max="100" value="40" step="1">
+          </div>
+          <span class="time-left">
+            -0:43
+          </span>
+        </div>
+        <!--Buttons section of the music player-->
+        <div class="buttons">
+          <a href="">
+            <img src="resources/logos/back.png" alt="Go back logo">
+          </a>
+          <button onclick="window.location.href= 'https:https://open.spotify.com/track/49AG4MU3Ij6a8NWEVLMuRu?si=4f12c23da1284af5';" target="_blank">
+            <img src="resources/logos/play-button-arrowhead.png" alt="">
+          </button>
+          <a href="">
+            <img src="resources/logos/forward.png" alt="Go back logo">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- **End of the music div container.-->
+     <!-- ** Start for the music DIV container.-->
+     <div class="music-player-container center">
       <!--Image section of the container-->
       <div class="image-container">
         <img src="resources/images/hero/albumCover.png" alt="ALbum Cover image. This is the new Saint Levant album.">
@@ -65,6 +109,50 @@
         <div class="song-info">
           <span class="song-title">
             From Gaza With Love
+          </span>
+          <span class="artist-name">
+            Saint Levant
+          </span>
+        </div>
+        <!--Time section of the song-->
+        <div class="time-bar">
+          <span class="time-pass">
+            1:29
+          </span>
+          <div class="bar">
+            <input type="range" min="0" max="100" value="40" step="1">
+          </div>
+          <span class="time-left">
+            -0:43
+          </span>
+        </div>
+        <!--Buttons section of the music player-->
+        <div class="buttons">
+          <a href="">
+            <img src="resources/logos/back.png" alt="Go back logo">
+          </a>
+          <button onclick="window.location.href= 'https://open.spotify.com/track/49AG4MU3Ij6a8NWEVLMuRu?si=4f12c23da1284af5'; ">
+            <img src="resources/logos/play-button-arrowhead.png" alt="">
+          </button>
+          <a href="">
+            <img src="resources/logos/forward.png" alt="Go back logo">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- **End of the music div container.-->
+     <!-- ** Start for the music DIV container.-->
+     <div class="music-player-container right" >
+      <!--Image section of the container-->
+      <div class="image-container">
+        <img src="resources/images/hero/hero-cover3.png" alt="ALbum Cover image. This is the new Saint Levant album.">
+      </div>
+      <!--Music Player section of the container-->
+      <div class="music-player">
+        <!--Info for the song-->
+        <div class="song-info">
+          <span class="song-title">
+            Very Few Friends
           </span>
           <span class="artist-name">
             Saint Levant

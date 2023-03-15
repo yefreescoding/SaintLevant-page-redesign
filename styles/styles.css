@@ -1,26 +1,152 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: solid 0.5px red;
-  /*
-
-  */
+main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  height: 90svh;
+}
+main div.left, main div.right {
+  display: none;
+}
+main .music-player-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  min-width: 18em;
+}
+main .music-player-container div.image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .music-player-container div.image-container img {
+  width: 80%;
+  border-radius: 8px;
+}
+main .music-player-container div.music-player {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 90%;
+  padding: 0.5em 0;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(245, 232, 232, 0.5);
+}
+main .music-player-container div.music-player .song-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+main .music-player-container div.music-player .song-info .song-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+main .music-player-container div.music-player .song-info .artist-name {
+  font-size: 1.5em;
+  color: #948083;
+}
+main .music-player-container div.music-player .time-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-weight: bold;
+  color: #948083;
+}
+main .music-player-container div.music-player .time-bar input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  background-color: transparent;
+}
+main .music-player-container div.music-player .time-bar input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  border: none;
+  background: transparent;
+}
+main .music-player-container div.music-player .time-bar input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  background: transparent;
+}
+main .music-player-container div.music-player .time-bar input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background-color: #594347;
+  border-radius: 8px;
+  border: none;
+}
+main .music-player-container div.music-player .time-bar input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgb(20, 19, 19);
+}
+main .music-player-container div.music-player .time-bar input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background-color: #594347;
+  border-radius: 8px;
+  border: none;
+}
+main .music-player-container div.music-player .time-bar input[type=range]:focus::-moz-range-track {
+  background-color: #000000;
+}
+main .music-player-container div.music-player .time-bar input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+main .music-player-container div.music-player .time-bar input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+main .music-player-container div.music-player .buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+main .music-player-container div.music-player .buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-img {
-  width: 2em;
+@media (min-width: 36em) {
+  main {
+    padding: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6em;
+    height: 75svh;
+  }
+  main div.left, main div.right {
+    display: flex;
+  }
 }
-
-body {
-  overflow-x: hidden;
-  background: #F2D5DB;
-}
-
 header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0.5em;
+  left: 1em;
+  right: 1em;
+  background-color: rgba(242, 213, 219, 0.5529411765);
 }
 header .page-logo {
   z-index: 9999;
@@ -32,12 +158,27 @@ header .page-logo {
   background-image: url(../resources/logos/menu.png);
   background-color: rgba(242, 213, 219, 0);
   background-repeat: no-repeat;
-  background-size: 32px;
+  background-size: 25px;
   border: none;
   cursor: pointer;
 }
 header nav#desktop-nav-bar {
   display: none;
+  font-family: "Gambarino", serif;
+  font-weight: bold;
+}
+header nav#desktop-nav-bar a {
+  color: #714f55;
+  text-decoration: none;
+  font-size: 1.8em;
+}
+header nav#desktop-nav-bar .page-mobile-title {
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+header nav#desktop-nav-bar .page-mobile-title .sub-title {
+  font-size: 0.6em;
+  margin-top: -0.8em;
 }
 header nav.nav-container {
   display: flex;
@@ -48,14 +189,20 @@ header nav.nav-container ul#mobile-nav-bar {
 }
 header nav.nav-container ul#mobile-nav-bar a {
   text-decoration: none;
-  color: white;
 }
 header nav.nav-container .page-mobile-title {
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  font-family: "Gambarino", serif;
+  color: #594347;
+  letter-spacing: 3px;
+}
+header nav.nav-container .page-mobile-title .sub-title {
+  font-size: 0.5em;
+  margin-top: -0.8em;
 }
 @media (max-width: 36em) {
   header button.page-logo {
@@ -72,12 +219,17 @@ header nav.nav-container .page-mobile-title {
     display: flex;
     flex-flow: column;
     gap: 2em;
-    background-color: rgba(70, 13, 80, 0.4);
+    background-color: rgba(250, 224, 255, 0.4);
     -webkit-backdrop-filter: blur(1rem);
             backdrop-filter: blur(1rem);
     padding: min(30vh, 10rem) 2rem;
     transform: translateX(-100%);
     transition: all 350ms ease-out;
+  }
+  header nav.nav-container ul.mobile-nav-bar a {
+    font-family: "Gambarino", serif;
+    font-size: 3em;
+    color: #594347;
   }
   header nav.nav-container .mobile-nav-bar[data-ver=true] {
     transform: translateX(0%);
@@ -88,7 +240,7 @@ header .music-note {
   width: 2rem;
 }
 header .music-note img {
-  width: 100%;
+  width: 28px;
 }
 
 @media (min-width: 36em) {
@@ -109,12 +261,100 @@ header .music-note img {
     gap: 3em;
     flex-shrink: 1;
   }
-  header nav#desktop-nav-bar h1 {
+  header nav#desktop-nav-bar a {
+    color: #714f55;
+    text-decoration: none;
+    font-size: 2em;
+  }
+  header nav#desktop-nav-bar .page-mobile-title {
     display: flex;
     flex-flow: column;
+    font-size: 2.5em;
+    letter-spacing: 5px;
     text-align: center;
+    line-height: 0.8em;
+    color: #594347;
+  }
+  header nav#desktop-nav-bar .page-mobile-title .sub-title {
+    font-size: 0.5em;
+    margin-top: 0;
+    letter-spacing: 0;
   }
   header nav.nav-container {
     display: none;
+  }
+}
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2em;
+}
+footer .socials {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  gap: 5em;
+}
+footer .socials img {
+  width: 2em;
+}
+footer .copyright {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+@media (min-width: 36em) {
+  footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 12svh;
+    padding: 0 2em;
+  }
+  footer .socials {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+  }
+  footer .copyright {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3em;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  /*
+  border: solid 0.5px red;  
+  */
+}
+
+img {
+  width: 2em;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(#F2D5DB, #F2ACC6);
+  padding: 0 1%;
+}
+
+html {
+  font-size: 80%;
+}
+
+@media (min-width: 36em) {
+  html {
+    font-size: 95%;
+  }
+  body {
+    padding: 6em 0 1%;
   }
 }/*# sourceMappingURL=styles.css.map */
