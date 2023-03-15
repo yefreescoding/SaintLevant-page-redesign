@@ -12,11 +12,10 @@
 <!-- *** Header of the web page. Navigation bar, Logo and sub menu. ***-->
   <header>
     <!--Logo menu-->
-    <div>
-      <img src="resources/logos/menu.png" alt="menu logo, three stripes">
-    </div>
+    <button aria-controls="mobile-nav-bar" aria-expanded="false" class="page-logo">
+    </button>
     <!--Navigation bar. Desktop version-->
-    <nav>
+    <nav id="desktop-nav-bar">
       <a href="">ABOUT</a>
       <a href="">MUSIC</a>
       <h1>
@@ -27,10 +26,29 @@
       <a href="">BOOKING</a>
     </nav>
     <!--Navigation bar. Mobile version-->
-    
+    <nav class="nav-container">
+      <ul id="mobile-nav-bar" data-ver="false" class="mobile-nav-bar flex">
+        <li class="active">
+          <a href="">ABOUT</a>
+        </li>
+        <li>
+          <a href="">MUSIC</a>
+        </li>
+        <li>
+          <a href="">TOUR</a>
+        </li>
+        <li>
+          <a href="">BOOKING</a>
+        </li>
+      </ul>
+      <h1 class="page-mobile-title">
+        Saint Levant
+        <span class="h1__sub-title">Lover Boy Levant</span>
+      </h1>
+    </nav>
     <!--Logo Music. *** DO NOT FORGET TO CHANGE THE WIDTH IN CSS ***-->
-    <div>
-      <img src="resources/logos/note.png" alt="spotify logo">
+    <div class="music-note">
+      <img src="resources/logos/note.png" alt="music logo">
     </div>
   </header>
 <!-- *** Where the important content of the web page goes. Follow the design instructions*** -->
@@ -96,5 +114,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>

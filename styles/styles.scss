@@ -1,0 +1,173 @@
+$fontPrincipal: 'Gambarino', serif;
+$mobileHeight: 100svh;
+
+// ***** General styles
+* {
+  padding: 0;
+  margin: 0;
+  border: solid 0.5px red;
+  /*
+    
+  */
+}
+
+img {
+  width: 2em;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F2D5DB;
+}
+
+// **** Header styles
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  .page-logo {
+    z-index: 9999;
+
+    aspect-ratio: 1;
+    width: 2rem;
+
+    display: grid;
+    place-items: center;
+    align-items: center;
+
+    background-image: url(../resources/logos/menu.png);
+    background-color: #f2d5db00;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  // *** Styles Navigation bar DESKTOP
+  nav#desktop-nav-bar {
+    display: none;
+  }
+
+
+  // *** Styles Navigation bar MOBILE
+
+  nav.nav-container {
+    display: flex;
+    flex-flow: row;
+
+    ul#mobile-nav-bar {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  
+    .page-mobile-title {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      text-align: center;
+      font-size: 1.5em;
+  
+    }
+  }
+  
+
+  @media (max-width:36em) {
+
+    button.page-logo {
+      z-index: 9999;
+    }
+
+    button.page-logo[aria-expanded="true"] {
+      background-image: url(../resources/logos/cross.png);
+      background-color: transparent;
+    }
+   
+    nav.nav-container {
+      
+      ul.mobile-nav-bar {
+        position: fixed;
+        inset: 0 30% 0 0;
+        z-index: 1000;
+
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+
+        background-color: rgba(70, 13, 80, 0.4);
+        backdrop-filter: blur(1rem);
+        padding: min(30vh, 10rem) 2rem;
+      
+        transform: translateX(-100%);
+        transition: all 350ms ease-out;
+      }
+
+      .mobile-nav-bar[data-ver="true"] {
+        transform: translateX(0%);
+      }
+    } 
+    }
+    
+
+  // *** Styles Navigation bar MOBILE
+
+  .music-note {
+    aspect-ratio: 1;
+    width: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width:36em) {
+
+  // **** Header styles
+
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+
+  button.page-logo {
+    visibility: hidden;
+  }
+  
+  // *** Styles Navigation bar DESKTOP
+  nav#desktop-nav-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    flex-shrink: 1;
+
+    h1 {
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+    }
+  }
+
+  // *** Styles Navigation bar MOBILE
+
+  nav.nav-container {
+    display: none;
+  }
+
+  // *** Styles Navigation bar MOBILE
+
+}
+}
+
+
+

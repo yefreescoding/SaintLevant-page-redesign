@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: solid 0.5px red;
+  /*
+
+  */
+}
+
+img {
+  width: 2em;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F2D5DB;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .page-logo {
+  z-index: 9999;
+  aspect-ratio: 1;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  background-image: url(../resources/logos/menu.png);
+  background-color: rgba(242, 213, 219, 0);
+  background-repeat: no-repeat;
+  background-size: 32px;
+  border: none;
+  cursor: pointer;
+}
+header nav#desktop-nav-bar {
+  display: none;
+}
+header nav.nav-container {
+  display: flex;
+  flex-flow: row;
+}
+header nav.nav-container ul#mobile-nav-bar {
+  list-style: none;
+}
+header nav.nav-container ul#mobile-nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+header nav.nav-container .page-mobile-title {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+@media (max-width: 36em) {
+  header button.page-logo {
+    z-index: 9999;
+  }
+  header button.page-logo[aria-expanded=true] {
+    background-image: url(../resources/logos/cross.png);
+    background-color: transparent;
+  }
+  header nav.nav-container ul.mobile-nav-bar {
+    position: fixed;
+    inset: 0 30% 0 0;
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+    background-color: rgba(70, 13, 80, 0.4);
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    padding: min(30vh, 10rem) 2rem;
+    transform: translateX(-100%);
+    transition: all 350ms ease-out;
+  }
+  header nav.nav-container .mobile-nav-bar[data-ver=true] {
+    transform: translateX(0%);
+  }
+}
+header .music-note {
+  aspect-ratio: 1;
+  width: 2rem;
+}
+header .music-note img {
+  width: 100%;
+}
+
+@media (min-width: 36em) {
+  header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header button.page-logo {
+    visibility: hidden;
+  }
+  header nav#desktop-nav-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    flex-shrink: 1;
+  }
+  header nav#desktop-nav-bar h1 {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+  header nav.nav-container {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
