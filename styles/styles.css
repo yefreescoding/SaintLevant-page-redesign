@@ -4,7 +4,7 @@ main {
   align-items: center;
   grid-template-columns: 1fr;
   gap: 3em;
-  height: 90svh;
+  height: 100svh;
 }
 main div.left, main div.right {
   display: none;
@@ -26,6 +26,7 @@ main .music-player-container div.image-container {
 main .music-player-container div.image-container img {
   width: 80%;
   border-radius: 8px;
+  box-shadow: 1px 3px 16px rgba(89, 87, 87, 0.461);
 }
 main .music-player-container div.music-player {
   display: grid;
@@ -33,9 +34,9 @@ main .music-player-container div.music-player {
   grid-template-rows: 1fr 1fr 1fr;
   width: 90%;
   padding: 0.5em 0;
-  border-radius: 12px;
+  border-radius: 25px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(245, 232, 232, 0.5);
+  background-color: rgba(245, 232, 232, 0.3);
 }
 main .music-player-container div.music-player .song-info {
   display: flex;
@@ -49,7 +50,7 @@ main .music-player-container div.music-player .song-info .song-title {
 }
 main .music-player-container div.music-player .song-info .artist-name {
   font-size: 1.5em;
-  color: #948083;
+  color: #565656;
 }
 main .music-player-container div.music-player .time-bar {
   display: flex;
@@ -57,13 +58,13 @@ main .music-player-container div.music-player .time-bar {
   justify-content: center;
   gap: 1em;
   font-weight: bold;
-  color: #948083;
+  color: #565656;
 }
 main .music-player-container div.music-player .time-bar input[type=range] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 100%;
+  width: 12em;
   background-color: transparent;
 }
 main .music-player-container div.music-player .time-bar input[type=range]::-webkit-slider-thumb {
@@ -87,7 +88,7 @@ main .music-player-container div.music-player .time-bar input[type=range]::-webk
   border: none;
 }
 main .music-player-container div.music-player .time-bar input[type=range]:focus::-webkit-slider-runnable-track {
-  background: rgb(20, 19, 19);
+  background-color: #f7edef;
 }
 main .music-player-container div.music-player .time-bar input[type=range]::-moz-range-track {
   width: 100%;
@@ -98,7 +99,7 @@ main .music-player-container div.music-player .time-bar input[type=range]::-moz-
   border: none;
 }
 main .music-player-container div.music-player .time-bar input[type=range]:focus::-moz-range-track {
-  background-color: #000000;
+  background-color: #f7edef;
 }
 main .music-player-container div.music-player .time-bar input[type=range]:focus {
   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
@@ -123,15 +124,29 @@ main .music-player-container div.music-player .buttons button {
   border: none;
   cursor: pointer;
 }
+main .music-player-container div.music-player .buttons button img {
+  width: 2.5em;
+}
 
 @media (min-width: 36em) {
   main {
     padding: 0;
     display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  main div.left {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    padding: 0;
+    display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6em;
-    height: 75svh;
+    gap: 5em;
   }
   main div.left, main div.right {
     display: flex;
@@ -143,10 +158,13 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0.5em;
-  left: 1em;
-  right: 1em;
-  background-color: rgba(242, 213, 219, 0.5529411765);
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  /*
+  */
+  background-color: rgba(247, 235, 237, 0.168627451);
+  padding: 0.5em 1em;
 }
 header .page-logo {
   z-index: 9999;
@@ -289,6 +307,11 @@ footer {
   flex-flow: column;
   align-items: center;
   gap: 2em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer img {
+  filter: invert(100%);
 }
 footer .socials {
   display: flex;
@@ -310,7 +333,6 @@ footer .copyright {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    height: 12svh;
     padding: 0 2em;
   }
   footer .socials {
@@ -342,7 +364,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(#F2D5DB, #F2ACC6);
+  background-image: linear-gradient(#F2D5DB, #F2ACC6, #594347);
   padding: 0 1%;
 }
 
@@ -355,6 +377,6 @@ html {
     font-size: 95%;
   }
   body {
-    padding: 6em 0 1%;
+    padding-top: 3em;
   }
 }/*# sourceMappingURL=styles.css.map */

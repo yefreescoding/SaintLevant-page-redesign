@@ -25,7 +25,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-image: linear-gradient($lightPink, $regularPink);
+  background-image: linear-gradient($lightPink, $regularPink, $darkPink);
   padding: 0 1%;
 }
 
@@ -39,7 +39,7 @@ html {
   }
 
   body {
-    padding: 6em 0 1%;
+    padding-top: 3em;
   }
 }
 

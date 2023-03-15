@@ -3,8 +3,15 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-
   gap: 2em;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  img {
+    filter: invert(100%);
+  }
 
   .socials {
     display: flex;
@@ -32,8 +39,6 @@ footer {
     flex-flow: row;
     justify-content: space-between;
     
-    height: 12svh;
-
     padding: 0 2em;
   
     .socials {

@@ -12,8 +12,8 @@ main {
   align-items: center;
   grid-template-columns: 1fr;
   gap: 3em;
-
-  height: 90svh;
+  
+  height: 100svh;
 
   div.left, div.right {
     display: none;
@@ -38,6 +38,8 @@ main {
       img {
         width: 80%;
         border-radius: 8px;
+
+        box-shadow: 1px 3px 16px rgba(89, 87, 87, 0.461);
       }
     }
 
@@ -49,11 +51,11 @@ main {
       width: 90%;
     
       padding: .5em 0;
-      border-radius: 12px;
+      border-radius: 25px;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      background-color: rgba(245, 232, 232, 0.5);
+      background-color: rgba(245, 232, 232, 0.3);
 
       .song-info {
         display: flex;
@@ -68,9 +70,11 @@ main {
 
         .artist-name {
           font-size: 1.5em;
-          color: #948083;
+          color: #565656;
         }
+
       }
+
       .time-bar {
         display: flex;
         align-items: center;
@@ -78,11 +82,11 @@ main {
         gap: 1em;
 
         font-weight: bold;
-        color: #948083;
+        color: #565656;
 
         input[type=range]{
           appearance: none;
-          width: 100%;
+          width: 12em;
           background-color: transparent;
         }
         input[type=range]::-webkit-slider-thumb {
@@ -107,7 +111,7 @@ main {
         }
 
         input[type=range]:focus::-webkit-slider-runnable-track {
-          background: rgb(20, 19, 19);
+          background-color: #f7edef;
         }
 
         input[type=range]::-moz-range-track {
@@ -120,7 +124,7 @@ main {
         }
 
         input[type=range]:focus::-moz-range-track{
-          background-color: #000000;
+          background-color: #f7edef;
         }
 
         input[type=range]:focus {
@@ -148,6 +152,10 @@ main {
           background: transparent;
           border: none;
           cursor: pointer;
+
+          img {
+            width: 2.5em;
+          }
         }
       }
     }
@@ -156,16 +164,30 @@ main {
   }
 }
 
-@media (min-width:36em ){
+@media (min-width:36em){
+
+  main {
+    padding: 0;
+  
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    div.left {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width:1024px) {
   main {
     padding: 0;
   
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6em;
-
-    height: 75svh;
+    gap: 5em;
 
     div.left, div.right {
       display: flex;

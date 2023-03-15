@@ -11,13 +11,16 @@ header {
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-
   position: fixed;
-  top: .5em;
-  left: 1em;
-  right: 1em;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  /*
+  */
+  background-color: #f7ebed2b;
 
-  background-color: #f2d5db8d;
+  padding: 0.5em 1em;
+
   .page-logo {
     z-index: 9999;
 
