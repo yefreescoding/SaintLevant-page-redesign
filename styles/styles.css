@@ -17,6 +17,9 @@ main .music-player-container {
   gap: 1em;
   min-width: 18em;
 }
+main .music-player-container img {
+  width: 2em;
+}
 main .music-player-container div.image-container {
   width: 100%;
   display: flex;
@@ -33,10 +36,10 @@ main .music-player-container div.music-player {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   width: 90%;
-  padding: 0.5em 0;
-  border-radius: 25px;
+  padding: 1em 0;
+  border-radius: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(245, 232, 232, 0.3);
+  background-color: rgba(245, 232, 232, 0.7);
 }
 main .music-player-container div.music-player .song-info {
   display: flex;
@@ -64,7 +67,7 @@ main .music-player-container div.music-player .time-bar input[type=range] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 12em;
+  width: 14.5em;
   background-color: transparent;
 }
 main .music-player-container div.music-player .time-bar input[type=range]::-webkit-slider-thumb {
@@ -163,7 +166,7 @@ header {
   right: 0em;
   /*
   */
-  background-color: rgba(247, 235, 237, 0.168627451);
+  background-image: linear-gradient(#F2ACC6, rgba(255, 255, 255, 0));
   padding: 0.5em 1em;
 }
 header .page-logo {
@@ -233,13 +236,13 @@ header nav.nav-container .page-mobile-title .sub-title {
   header nav.nav-container ul.mobile-nav-bar {
     position: fixed;
     inset: 0 30% 0 0;
-    z-index: 1000;
+    z-index: 9998;
     display: flex;
     flex-flow: column;
     gap: 2em;
-    background-color: rgba(250, 224, 255, 0.4);
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
+    background-color: rgba(250, 224, 255, 0.6);
+    -webkit-backdrop-filter: blur(2rem);
+            backdrop-filter: blur(2rem);
     padding: min(30vh, 10rem) 2rem;
     transform: translateX(-100%);
     transition: all 350ms ease-out;
@@ -310,22 +313,26 @@ footer {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-footer img {
-  filter: invert(100%);
-}
 footer .socials {
   display: flex;
   align-items: center;
   flex-flow: row;
   gap: 5em;
 }
+footer .socials a {
+  overflow: hidden;
+}
 footer .socials img {
   width: 2em;
+  overflow: hidden;
 }
 footer .copyright {
   display: flex;
   align-items: center;
   gap: 3em;
+}
+footer .copyright img {
+  width: 2em;
 }
 
 @media (min-width: 36em) {
@@ -358,13 +365,14 @@ footer .copyright {
   */
 }
 
+/*
 img {
   width: 2em;
 }
-
+*/
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(#F2D5DB, #F2ACC6, #594347);
+  background-image: linear-gradient(#F2D5DB, #f9e2e7, #F2ACC6);
   padding: 0 1%;
 }
 
@@ -379,4 +387,7 @@ html {
   body {
     padding-top: 3em;
   }
+}
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */

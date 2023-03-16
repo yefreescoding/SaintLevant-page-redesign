@@ -17,7 +17,7 @@ header {
   right: 0em;
   /*
   */
-  background-color: #f7ebed2b;
+  background-image: linear-gradient($regularPink, rgba(255, 255, 255, 0));
 
   padding: 0.5em 1em;
 
@@ -117,14 +117,14 @@ header {
       ul.mobile-nav-bar {
         position: fixed;
         inset: 0 30% 0 0;
-        z-index: 1000;
+        z-index: 9998;
 
         display: flex;
         flex-flow: column;
         gap: 2em;
 
-        background-color: rgba(250, 224, 255, 0.4);
-        backdrop-filter: blur(1rem);
+        background-color: rgba(250, 224, 255, 0.6);
+        backdrop-filter: blur(2rem);
         padding: min(30vh, 10rem) 2rem;
       
         transform: translateX(-100%);

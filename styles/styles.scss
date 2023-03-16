@@ -19,13 +19,15 @@ $regularPink: #F2ACC6;
   */
 }
 
+/*
 img {
   width: 2em;
 }
+*/
 
 body {
   overflow-x: hidden;
-  background-image: linear-gradient($lightPink, $regularPink, $darkPink);
+  background-image: linear-gradient($lightPink, #f9e2e7, $regularPink);
   padding: 0 1%;
 }
 
@@ -41,6 +43,10 @@ html {
   body {
     padding-top: 3em;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 

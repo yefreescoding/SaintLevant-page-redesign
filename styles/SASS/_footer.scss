@@ -8,11 +8,6 @@ footer {
   color: white;
 
   font-family: Arial, Helvetica, sans-serif;
-
-  img {
-    filter: invert(100%);
-  }
-
   .socials {
     display: flex;
     align-items: center;
@@ -20,8 +15,12 @@ footer {
 
     gap: 5em;
 
+    a {
+     overflow: hidden;
+    }
     img {
       width: 2em;
+      overflow: hidden;
     }
   }
   .copyright {
@@ -29,6 +28,10 @@ footer {
     align-items: center;
 
     gap: 3em;
+
+    img {
+      width: 2em;
+    }
 
   }
 }
