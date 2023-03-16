@@ -39,7 +39,7 @@ main .music-player-container div.music-player {
   padding: 1em 0;
   border-radius: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(245, 232, 232, 0.7);
+  background-color: rgba(216, 194, 194, 0.7);
 }
 main .music-player-container div.music-player .song-info {
   display: flex;
@@ -164,6 +164,7 @@ header {
   top: 0em;
   left: 0em;
   right: 0em;
+  z-index: 200;
   /*
   */
   background-image: linear-gradient(#F2ACC6, rgba(255, 255, 255, 0));
@@ -315,6 +316,7 @@ footer {
   align-items: center;
   gap: 2em;
   color: white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(172, 96, 108, 0.634));
   font-family: Arial, Helvetica, sans-serif;
 }
 footer .socials {
@@ -361,6 +363,81 @@ footer .copyright img {
     gap: 3em;
   }
 }
+div.bio-container {
+  padding: 25% 4% 3% 4%;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  gap: 1em;
+}
+div.bio-container div.about-title {
+  border-top: solid rgba(108, 81, 86, 0.6470588235) 1px;
+  border-bottom: solid rgba(108, 81, 86, 0.6470588235) 1px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+div.bio-container div.about-title h1 {
+  font-family: "Aktura", serif;
+  font-size: 5.5em;
+  letter-spacing: 1px;
+  color: #432f33;
+}
+div.bio-container div.about-image {
+  background-image: url(../../resources/images/hero/hero-bio2.png);
+  width: 100%;
+  height: 30em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  border-bottom: #432f33 1px solid;
+}
+div.bio-container div.about-image span {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  font-family: "Gambarino", serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+div.bio-container div.about-bio {
+  border-top: solid rgba(108, 81, 86, 0.6470588235) 1px;
+  border-bottom: solid rgba(108, 81, 86, 0.6470588235) 1px;
+  padding: 3% 0;
+}
+div.bio-container div.about-bio p {
+  font-family: "Lora", serif;
+  font-size: 1.6em;
+  text-align: justify;
+  color: #594347;
+  font-weight: 700;
+}
+
+.about-footer {
+  position: relative;
+}
+
+@media (min-width: 36em) {
+  div.bio-container {
+    padding: 3% 4% 3% 4%;
+  }
+  div.bio-container div.about-title h1 {
+    font-size: 10em;
+  }
+  div.bio-container div.about-image {
+    height: 35em;
+    background-position: top;
+  }
+  div.bio-container div.about-image span {
+    bottom: 0;
+    left: 25%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -376,8 +453,8 @@ img {
 */
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(#F2D5DB, #f9e2e7, #F2ACC6);
-  padding: 0 1%;
+  background-image: linear-gradient(#F2D5DB, #fff9fa, #F2D5DB);
+  padding: 0;
 }
 
 html {

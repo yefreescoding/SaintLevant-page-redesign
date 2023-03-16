@@ -1,8 +1,12 @@
 @import "SASS/cover";
 @import "SASS/header";
 @import "SASS/footer";
+@import "SASS/about";
 
 $fontPrincipal: 'Gambarino', serif;
+$paragraphFont: 'Lora', serif;
+$titleFont: 'Aktura', serif;
+
 $mobileHeight: 100svh;
 $darkPink: #594347;
 $lightPink: #F2D5DB;
@@ -27,8 +31,8 @@ img {
 
 body {
   overflow-x: hidden;
-  background-image: linear-gradient($lightPink, #f9e2e7, $regularPink);
-  padding: 0 1%;
+  background-image: linear-gradient($lightPink, #fff9fa, $lightPink);
+  padding: 0;
 }
 
 html {
