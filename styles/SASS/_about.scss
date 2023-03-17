@@ -51,11 +51,14 @@ div.bio-container {
     span {
       position: absolute;
       bottom: 0;
-      left: 10%;
+      left: 0;
+      right: 0;
 
       font-family: $fontPrincipal;
       font-size: 3em;
       font-weight: bold;
+
+      background-image: linear-gradient(rgba(255, 255, 255, 0),  rgba(189, 189, 189, 0.2), rgba(94, 94, 94, 0.6));
       color: white;
 
       text-align: center;
@@ -100,7 +103,9 @@ div.bio-container {
 
       span {
         bottom: 0;
-        left: 25%;
+        left: 0;
+        right: 0;
+
       }
     }
   }
