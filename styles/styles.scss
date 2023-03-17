@@ -2,6 +2,7 @@
 @import "SASS/header";
 @import "SASS/footer";
 @import "SASS/about";
+@import "SASS/music";
 
 $fontPrincipal: 'Gambarino', serif;
 $paragraphFont: 'Lora', serif;
@@ -18,8 +19,9 @@ $regularPink: #F2ACC6;
   padding: 0;
   margin: 0;
   
+  
   /*
-  border: solid 0.5px red;  
+   border: solid 0.5px red; 
   */
 }
 
