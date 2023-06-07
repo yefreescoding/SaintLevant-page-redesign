@@ -1,38 +1,24 @@
-# Web Site Redesign for artist Saint Levant. (Inspired in his new album).
+# NO OFFICIAL Web Site Redesign for artist Saint Levant.
 
-This a web page made with HTML, CSS (SASS) and some JavaScript. 
-Wanted to create a simple and aesthetic web experience with this project. I'm currently building the web site, but the front page of the web site it's almost done. 
+This a web page made with HTML, CSS (SASS) and some JavaScript.
+Wanted to create a simple and aesthetic web experience with this project. I'm currently building the web site, but the front page of the web site it's almost done.
 Feel free to check out my project.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout depending on their device's screen size
-- Click on every link and be able to move around the page in a user friendly way.
 
 ### Screenshot
 
 ![](screenshots/desktop.png)
-![](screenshots/mobile.png)
-![](screenshots/tablet.png)
-
 
 ### Links
 
@@ -48,28 +34,12 @@ Users should be able to:
 - FlexBox
 - CSS Grid
 - Mobile-first workflow
-
-### What I learned
-
-Learned new and better ways to use the view port measures for a better responsive design.
-
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-header {
-  height: 100svh;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- Astro framework
+- Postcss
 
 ### Continued development
-The next step will be finish the other pages of the web page.
+
+Migrating the project to Astro Framework...
 
 ### Useful resources
 
@@ -79,7 +49,6 @@ The next step will be finish the other pages of the web page.
 
 - GitHub Account - [Yefree Valdez](https://github.com/yefreescoding)
 - Twitter - [@YefreeCodes](https://twitter.com/YefreeCodes)
-
 
 ## Acknowledgments
 
