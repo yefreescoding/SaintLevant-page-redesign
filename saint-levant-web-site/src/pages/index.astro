@@ -1,0 +1,59 @@
+---
+// import Layouts
+import MainLayout from "./Layout/MainLayout.astro";
+
+import Footer from "./Layout/Footer.astro";
+---
+
+<MainLayout title={"Saint Levant | Home"}>
+	<!-- *** Where the important content of the web page goes. Follow the design instructions*** -->
+	<main class="page-container">
+		<div class="music-player-container center">
+			<!--Image section of the container-->
+			<div class="image-container">
+				<img
+					src="/images/hero/albumCover.png"
+					alt="ALbum Cover image. This is the new Saint Levant album."
+				/>
+			</div>
+			<!--Music Player section of the container-->
+			<div class="music-player">
+				<!--Info for the song-->
+				<div class="song-info">
+					<span class="song-title"> From Gaza With Love</span>
+					<span class="artist-name"> Saint Levant</span>
+				</div>
+				<!--Time section of the song-->
+				<div class="time-bar">
+					<span class="time-pass"> 1:29</span>
+					<div class="bar">
+						<input
+							type="range"
+							min="0"
+							max="100"
+							value="40"
+							step="1"
+						/>
+					</div>
+					<span class="time-left"> -0:43</span>
+				</div>
+				<!--Buttons section of the music player-->
+				<!-- <div class="buttons">
+					<a href="">
+						<img src="/logos/back.png" alt="Go back logo" />
+					</a>
+					<button
+						onclick="
+						window.location.href = 'https://open.spotify.com/track/49AG4MU3Ij6a8NWEVLMuRu?si=4f12c23da1284af5'; "
+					>
+						<img src="/logos/play-button-arrowhead.png" alt="" />
+					</button>
+					<a href="">
+						<img src="/logos/forward.png" alt="Go back logo" />
+					</a>
+				</div> -->
+			</div>
+		</div>
+	</main>
+	<Footer />
+</MainLayout>

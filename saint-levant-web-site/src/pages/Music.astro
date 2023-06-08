@@ -1,0 +1,35 @@
+---
+import MainLayout from "./Layout/MainLayout.astro";
+import Header from "./Layout/Header.astro";
+import Footer from "./Layout/Footer.astro";
+---
+
+<MainLayout title={"Saint Levant | Home"}>
+    <Header />
+    <main class="music-main">
+        <!--***** Intro cover of the web page.******-->
+        <section class="cover-music-section">
+            <!--*** Image of the***-->
+            <div class="image-info-container">
+                <img
+                    src="..//images/hero/about-hero-saint-levant.webp"
+                    alt=""
+                />
+                <h1>Saint Levant Discography</h1>
+            </div>
+
+            <!--*** Title of the web page ***-->
+            <div class="title-music">
+                <p>
+                    I wanna take you to Paris and spoil you <br />
+                    I wanna go to Marseille and enjoy you <br />
+                    I want those guys in your DM's who talk to themselves <br />
+                    And then tell all their friends that they know you <br />
+                    I wanna make you forget about your ex <br />
+                    I want you overthinkin' all your texts <br />
+                </p>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</MainLayout>
