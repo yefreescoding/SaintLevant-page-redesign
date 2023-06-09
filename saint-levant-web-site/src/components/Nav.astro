@@ -1,0 +1,47 @@
+---
+// links
+
+const NAV_LINKS = [
+  {
+    name: 'About',
+    link: '/about/',
+  },
+  {
+    name: 'Music',
+    link: '/music/',
+  },
+  {
+    name: 'Post',
+    link: '/posts/',
+  },
+];
+---
+
+<!--Navigation bar. Desktop version-->
+<nav id="nav-bar" class="nav">
+  <ul id="mobile-nav-bar">
+    {
+      NAV_LINKS.map((link) => (
+        <li class={link.link}>
+          <a href="pages/about.html">{link.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+  .nav {
+    flex: 1;
+    ul {
+      display: flex;
+    }
+    li {
+      flex: 1;
+      text-align: center;
+    }
+    a {
+      font-size: 1.3rem;
+    }
+  }
+</style>
