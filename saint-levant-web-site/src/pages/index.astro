@@ -5,7 +5,7 @@ import MainLayout from '../layout/MainLayout.astro';
 
 <MainLayout title={'Saint Levant | Home'}>
   <div class="cover" aria-label="Cover for the web page">
-    <p>from gaza with love</p>
+    <p class="sub-header">from gaza with love</p>
     <h1>saint levant</h1>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, cumque
@@ -21,17 +21,19 @@ import MainLayout from '../layout/MainLayout.astro';
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: min(100%, 60em);
-    margin-inline: auto;
     gap: 2rem;
-    p {
-    }
-    h1 {
+
+    .sub-header {
+      text-transform: capitalize;
+      font-style: italic;
     }
     img {
-      aspect-ratio: 16/9;
+      aspect-ratio: 9/16;
       object-fit: cover;
       object-position: top;
+      @media (min-width: 40em) {
+        aspect-ratio: 16/9;
+      }
     }
   }
 </style>

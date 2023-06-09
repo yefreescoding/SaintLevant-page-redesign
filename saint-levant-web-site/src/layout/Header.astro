@@ -4,9 +4,6 @@ import Nav from '../components/Nav.astro';
 
 <!-- *** Header of the web page. Navigation bar, Logo and sub menu. ***-->
 <header>
-  <a href="/" aria-label="Go home">
-    <img src="/logos/note.png" alt="music logo" />
-  </a>
   <Nav />
   <!--Logo Music. *** DO NOT FORGET TO CHANGE THE WIDTH IN CSS ***-->
 </header>
@@ -17,9 +14,6 @@ import Nav from '../components/Nav.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      width: 4em;
-      aspect-ratio: 1;
-    }
+    padding: 1rem;
   }
 </style>

@@ -14,10 +14,10 @@
 :root {
   /* Variables */
   /* Color */
-  --clr-text: hsl(344, 51%, 16%);
+  --clr-text: hsl(344, 10%, 86%);
   --clr-text-2: hsl(338, 54%, 49%);
   --clr-cms: hsl(327, 67%, 55%);
-  --clr-bg: hsl(316, 82%, 91%);
+  --clr-bg: hsl(300, 0%, 4%);
   --clr-bg-2: hsl(11, 32%, 63%);
 
   --fnt-april: 'April Fatface';
@@ -40,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
 
-  outline: 0.5px solid hsl(0, 0%, 20%);
+  /* outline: 0.5px solid hsl(0, 0%, 20%); */
 }
 
 img,
@@ -73,94 +73,45 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 5.5rem);
+  font-size: clamp(2.5rem, 7vw, 7.5rem);
   text-transform: uppercase;
   font-family: var(--fnt-april);
 }
 
 p {
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.125;
   font-family: var(--fnt-dm-sans), Arial, Helvetica, sans-serif;
+  color: var(--clr-text);
 }
 
 .background {
+  position: relative;
   display: grid;
   place-items: center;
-  padding: 5vh 5vw;
-  background-color: #080404;
+  padding: 3vh min(0.5rem, 5vw);
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background-image: url('/images/hero/bg-hero.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: blur(1rem) grayscale(100%);
 }
 
 .main {
   background-color: var(--clr-bg);
   display: grid;
-  /* place-items: center; */
+  gap: 3rem;
+  width: min(100%, 70em);
+  margin-inline: auto;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  gap: 0.5em;
-  color: white;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(172, 96, 108, 0.634)
-  );
-  font-family: 'DM Sans', Helvetica, sans-serif;
-}
-footer .socials {
-  display: flex;
-  align-items: center;
-  flex-flow: row;
-  gap: 5em;
-}
-footer .socials a {
-  overflow: hidden;
-}
-footer .socials img {
-  width: 2em;
-  overflow: hidden;
-}
-footer .copyright {
-  display: flex;
-  align-items: center;
-  gap: 2em;
-}
-footer .copyright img {
-  width: 2em;
-}
-
-@media (min-width: 36em) {
-  footer {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    padding: 0 2em;
-  }
-  footer .socials {
-    flex: 1;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 2em;
-  }
-  footer .copyright {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 3em;
-  }
-}
 div.bio-container {
   padding: 25% 4% 3% 4%;
   display: grid;

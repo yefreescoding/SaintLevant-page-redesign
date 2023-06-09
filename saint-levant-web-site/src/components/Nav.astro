@@ -3,6 +3,10 @@
 
 const NAV_LINKS = [
   {
+    name: 'Home',
+    link: '/',
+  },
+  {
     name: 'About',
     link: '/about/',
   },
@@ -22,8 +26,8 @@ const NAV_LINKS = [
   <ul id="mobile-nav-bar">
     {
       NAV_LINKS.map((link) => (
-        <li class={link.link}>
-          <a href="pages/about.html">{link.name}</a>
+        <li>
+          <a href={link.link}>{link.name}</a>
         </li>
       ))
     }
@@ -41,7 +45,7 @@ const NAV_LINKS = [
       text-align: center;
     }
     a {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 </style>
