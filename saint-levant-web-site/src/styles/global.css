@@ -1,16 +1,3 @@
-@font-face {
-  font-family: 'April Fatface';
-  src: url('../../public/fonts/Abril_Fatface/AbrilFatface-Regular.ttf')
-    format('ttf');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'DM Sans';
-  src: url('../../fonts/DM_Sans/DMSans-Regular.ttf') format('ttf');
-  font-weight: medium;
-}
-
 :root {
   /* Variables */
   /* Color */
@@ -20,8 +7,8 @@
   --clr-bg: hsl(300, 0%, 4%);
   --clr-bg-2: hsl(11, 32%, 63%);
 
-  --fnt-april: 'April Fatface';
-  --fnt-dm-sans: 'DM Sans';
+  --fnt-hdr: 'Boska';
+  --fnt-regular: 'Cabinet Grotesk';
 }
 
 html {
@@ -31,7 +18,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: var(--fnt-dm-sans), Arial, Helvetica, sans-serif;
+  font-family: 'Cabinet Grotesk', sans-serif;
 }
 
 *,
@@ -49,7 +36,7 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 ul {
@@ -81,20 +68,21 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
-  font-family: var(--fnt-april);
+  font-family: 'Boska', serif;
   color: var(--clr-text);
 }
 
 h1 {
   font-size: clamp(3rem, 7vw, 8rem);
-  text-transform: uppercase;
-  font-family: var(--fnt-april);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 6.5rem);
 }
 
 p {
   font-size: clamp(1rem, 2vw, 1.3rem);
-  line-height: 1.125;
-  font-family: var(--fnt-dm-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.5;
   color: var(--clr-text);
 }
 
@@ -136,88 +124,6 @@ p {
   filter: brightness(15%) grayscale(100%);
 }
 
-div.bio-container {
-  padding: 25% 4% 3% 4%;
-  display: grid;
-  place-items: center;
-  align-items: center;
-  gap: 1em;
-}
-div.bio-container div.about-title {
-  border-top: solid rgba(108, 81, 86, 0.6470588235) 1px;
-  border-bottom: solid rgba(108, 81, 86, 0.6470588235) 1px;
-  width: 100%;
-  text-align: center;
-  position: relative;
-}
-div.bio-container div.about-title h1 {
-  font-family: 'Aktura', serif;
-  font-size: 5.5em;
-  letter-spacing: 1px;
-  color: #432f33;
-}
-div.bio-container div.about-image {
-  background-image: url(../..//images/hero/hero-bio2.png);
-  width: 100%;
-  height: 30em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 2;
-  border-bottom: #432f33 1px solid;
-}
-div.bio-container div.about-image span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-family: 'Gambarino', serif;
-  font-size: 3em;
-  font-weight: bold;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(189, 189, 189, 0.2),
-    rgba(94, 94, 94, 0.6)
-  );
-  color: white;
-  text-align: center;
-  align-items: center;
-}
-div.bio-container div.about-bio {
-  border-top: solid rgba(108, 81, 86, 0.6470588235) 1px;
-  border-bottom: solid rgba(108, 81, 86, 0.6470588235) 1px;
-  padding: 3% 0;
-}
-div.bio-container div.about-bio p {
-  font-family: 'Lora', serif;
-  font-size: 1.6em;
-  text-align: justify;
-  color: #594347;
-  font-weight: 700;
-}
-
-.about-footer {
-  position: relative;
-}
-
-@media (min-width: 36em) {
-  div.bio-container {
-    padding: 3% 4% 3% 4%;
-  }
-  div.bio-container div.about-title h1 {
-    font-size: 10em;
-  }
-  div.bio-container div.about-image {
-    height: 35em;
-    background-position: top;
-  }
-  div.bio-container div.about-image span {
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-}
 main.music-main {
   display: grid;
   grid-template-columns: 1fr;
