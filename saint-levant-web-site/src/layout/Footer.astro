@@ -21,7 +21,7 @@ const FOOTER_LINKS = [
 ---
 
 <footer>
-  <ul class="socials">
+  <ul>
     {
       FOOTER_LINKS.map((link) => (
         <li>
@@ -33,7 +33,9 @@ const FOOTER_LINKS = [
     }
   </ul>
   <div class="copyright">
-    <small>Copyright all right reserved. Yefree De Los Santos Valdez.</small>
+    <small
+      >Copyright &copy; all right reserved 2023. Yefree De Los Santos Valdez.</small
+    >
   </div>
 </footer>
 
@@ -44,16 +46,14 @@ const FOOTER_LINKS = [
     text-align: center;
     gap: 0.5em;
     color: var(--clr-text);
-  }
-  footer .socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-  }
-  footer .socials img {
-    width: 2em;
-    aspect-ratio: 1;
-    overflow: hidden;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+    li {
+      flex: 1;
+    }
   }
 </style>

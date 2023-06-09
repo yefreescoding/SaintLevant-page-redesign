@@ -5,12 +5,25 @@ import MainLayout from '../layout/MainLayout.astro';
 
 <MainLayout title={'Saint Levant | Home'}>
   <div class="cover" aria-label="Cover for the web page">
-    <p class="sub-header">from gaza with love</p>
-    <h1>saint levant</h1>
+    <p class="cool sub-header">
+      <span data-text="from">from</span>
+      <span data-text="gaza">gaza</span>
+      <span data-text="with">with</span>
+      <span data-text="love">love</span>
+    </p>
+    <h1 class="cool">
+      <span data-text="saint"> saint</span>
+      <span data-text="levant"> levant</span>
+    </h1>
     <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, cumque
-      temporibus illo corporis assumenda, dignissimos vitae neque porro ut
-      voluptas at accusamus quae consequuntur nemo.
+      You'll nеver find another Arab that's better than me I know you wanna be a
+      part of the family tree But when your legs up on my shoulders it's harder
+      to speak But keep talking to me, حياتي She said, "I been all over, hopping
+      out of these Range Rovers I'm barely sober, I feel lonely I'm so over The
+      people that I'm hanging out with, they're not cultured" She grew up in the
+      East, now she's here so we toast To the fact that she made it this far,
+      it's not easy She said that I look familiar and she's seen me All over her
+      FYP, that might be me Believe me, I tell her حبيبت
     </p>
     <img src="/images/hero/cover-hero.png" alt="" />
   </div>
@@ -18,10 +31,14 @@ import MainLayout from '../layout/MainLayout.astro';
 
 <style lang="scss">
   .cover {
-    display: flex;
+    &,
+    .sub-header {
+      display: flex;
+      gap: 2rem;
+      text-align: center;
+      justify-content: center;
+    }
     flex-direction: column;
-    text-align: center;
-    gap: 2rem;
 
     .sub-header {
       text-transform: capitalize;
@@ -34,6 +51,88 @@ import MainLayout from '../layout/MainLayout.astro';
       @media (min-width: 40em) {
         aspect-ratio: 16/9;
       }
+    }
+
+    p {
+      padding-inline: 5vw;
+    }
+  }
+
+  .cool {
+    color: var(--clr-bg);
+
+    span {
+      color: var(--shadow);
+      display: inline-block;
+      position: relative;
+
+      // Setting the stagger "by hand". You have to know the number of
+      // children beforehand and loop through them all, or set staggers
+      // only for a number of first children. Or set it with js
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          &::before,
+          &::after {
+            animation-delay: #{$i / 10}s;
+          }
+        }
+      }
+
+      // make the font black again if no animation is playing
+      @media (prefers-reduced-motion) {
+        color: var(--clr-text);
+      }
+
+      // the magic, kinda
+      &::before {
+        animation: max-height 1.5s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+        color: var(--clr-text);
+      }
+
+      &::after {
+        animation: max-width 1.5s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+        color: var(--clr-text);
+      }
+
+      &::before,
+      &::after {
+        // Using data attribute to avoid duplicated content in HTML.
+        // It has a very good support when used in the content property
+        // https://caniuse.com/mdn-css_types_attr
+        content: attr(data-text);
+        left: 0;
+        // The overflowing text is cut off
+        overflow: hidden;
+        position: absolute;
+        // Set the speak property to none, because we don't want screen
+        // readers to read every word in the paragraph twice. "Hello, hello"? No!
+        speak: none;
+
+        // In this case we just don't animate things, BUT we can maybe animate opacity
+        // only since reduced motion != no motion
+        @media (prefers-reduced-motion) {
+          animation: none;
+          content: '';
+        }
+      }
+    }
+  }
+
+  @keyframes max-width {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%;
+    }
+  }
+
+  @keyframes max-height {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: 100%;
     }
   }
 </style>
