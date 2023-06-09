@@ -11,7 +11,7 @@ const Tag = tagType;
 <style lang="scss" is:global>
   .cool {
     color: var(--clr-bg);
-
+    text-align: center;
     span {
       color: var(--shadow);
       display: inline-block;
@@ -64,7 +64,7 @@ const Tag = tagType;
         // only since reduced motion != no motion
         @media (prefers-reduced-motion) {
           animation: none;
-          content: '';
+          content: "";
         }
       }
     }

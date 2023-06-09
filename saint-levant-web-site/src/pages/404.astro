@@ -1,0 +1,19 @@
+---
+// import Layouts
+import MainLayout from "../layout/MainLayout.astro";
+
+//import components
+import LetterAnimate from "../components/LetterAnimate.astro";
+---
+
+<MainLayout title={"Saint Levant | Home"}>
+    <LetterAnimate tagType="h1" class="cool">
+        <span data-text="ERROR"> ERROR</span>
+        <span data-text="404"> 404</span>
+    </LetterAnimate>
+    <p style="text-align: center;">
+        This means that there is a problem with the roots, or the page you are
+        trying to reach do not exist. Click the <a href="/">Home</a> link on the
+        left corner of the page.
+    </p>
+</MainLayout>

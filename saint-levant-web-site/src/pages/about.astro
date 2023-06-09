@@ -20,11 +20,11 @@ import LetterAnimate from "../components/LetterAnimate.astro";
       </LetterAnimate>
       <div class="about__bio">
         <p>
-          <span>Marwan</span> Abdelhamid SAINT LEVANT, is a Palestinian / French
-          / Algerian / Serbian artist. Born in Jerusalem, and raised in Gaza, Saint
-          Levant fuses English, French and Arabic to bring a truly unique take on
-          modern global music. Effortless and seductive trilingual wordplay has established
-          him as a breakout global star.
+          Marwan Abdelhamid SAINT LEVANT, is a Palestinian / French / Algerian /
+          Serbian artist. Born in Jerusalem, and raised in Gaza, Saint Levant
+          fuses English, French and Arabic to bring a truly unique take on
+          modern global music. Effortless and seductive trilingual wordplay has
+          established him as a breakout global star.
         </p>
         <p>
           Inspired by influential Arab thinkers from generations past and
@@ -40,10 +40,14 @@ import LetterAnimate from "../components/LetterAnimate.astro";
         </p>
       </div>
     </div>
-    <div class="about__images">
-      <img src="/images/hero/about-hero.png" alt="" />
-      <!-- <img src="" alt="" /> -->
-    </div>
+    <img
+      class="about__images"
+      src="/images/hero/about-hero.jpg"
+      alt="Saint Levant portrait"
+    />
+    <!-- <div class="about__images">
+      <img src="" alt="" /> 
+    </div> -->
   </section>
 </MainLayout>
 
@@ -64,21 +68,19 @@ import LetterAnimate from "../components/LetterAnimate.astro";
   }
   .about__text {
     flex-basis: 30em;
-    flex-grow: 2;
+    flex-grow: 5;
     padding: 2vh 5vw;
   }
   .about__h1 {
     text-align: center;
   }
   .about__images {
-    flex-basis: 20em;
+    width: min(100%, 20em);
     flex-grow: 1;
-    img {
+    object-position: top;
+    object-fit: cover;
+    @media (min-width: 40em) {
       aspect-ratio: 16/9;
-      object-fit: cover;
-      @media (min-width: 40em) {
-        aspect-ratio: 9/16;
-      }
     }
   }
 </style>

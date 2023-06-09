@@ -1,33 +1,59 @@
 ---
-import LetterAnimate from "../components/LetterAnimate.astro";
+// import layout
 import MainLayout from "../layout/MainLayout.astro";
+
+// import components
+import LetterAnimate from "../components/LetterAnimate.astro";
 ---
 
-<MainLayout title={"Saint Levant | Home"}>
-    <main class="music-main">
-        <LetterAnimate tagType="h1" class="cool">music</LetterAnimate>
-        <!--***** Intro cover of the web page.******-->
-        <section class="cover-music-section">
-            <!--*** Image of the***-->
-            <div class="image-info-container">
-                <img
-                    src="..//images/hero/about-hero-saint-levant.webp"
-                    alt=""
-                />
-                <h1>Saint Levant Discography</h1>
-            </div>
-
-            <!--*** Title of the web page ***-->
-            <div class="title-music">
-                <p>
-                    I wanna take you to Paris and spoil you <br />
-                    I wanna go to Marseille and enjoy you <br />
-                    I want those guys in your DM's who talk to themselves <br />
-                    And then tell all their friends that they know you <br />
-                    I wanna make you forget about your ex <br />
-                    I want you overthinkin' all your texts <br />
+<MainLayout title={"Saint Levant | Music"}>
+    <LetterAnimate tagType="h1" class="cool">
+        <span data-text="music">music</span>
+    </LetterAnimate>
+    <section class="music-section" aria-label="Music section cover">
+        <section class="music-section">
+            <LetterAnimate tagType="h2" class="cool">
+                <span data-text="Saint">Saint</span>
+                <span data-text="Levant">Levant</span>
+                <span data-text="Discography">Discography</span>
+            </LetterAnimate>
+            <div class="music-section__div">
+                <img src="/images/hero/music-hero.jpg" alt="Album cover" />
+                <p class="music-section__lyrics">
+                    <span>"I wanna take you to Paris and spoil you</span>
+                    <span>I wanna go to Marseille and enjoy you</span>
+                    <span
+                        >I want those guys in your DM's who talk to themselves
+                    </span>
+                    <span
+                        >And then tell all their friends that they know you
+                    </span>
+                    <span>I wanna make you forget about your ex</span>
+                    <span>I want you overthinkin' all your texts."</span>
                 </p>
             </div>
         </section>
-    </main>
+    </section>
 </MainLayout>
+
+<style>
+    .music-section,
+    .music-section__lyrics {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .music-section__div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr));
+    }
+    img {
+        aspect-ratio: 1;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .music-section__lyrics {
+        justify-content: center;
+        padding-inline: 3vw;
+    }
+</style>
