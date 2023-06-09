@@ -106,7 +106,7 @@ p {
 
 .background::after {
   background-image: url('/images/hero/bg-hero.png');
-  filter: blur(1rem) grayscale(100%);
+  filter: blur(.3rem) grayscale(100%);
 }
 
 .main {

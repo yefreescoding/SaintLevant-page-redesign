@@ -1,19 +1,19 @@
 ---
 // import Layouts
-import MainLayout from '../layout/MainLayout.astro';
+import MainLayout from "../layout/MainLayout.astro";
 
 //import components
-import LetterAnimate from '../components/LetterAnimate.astro';
+import LetterAnimate from "../components/LetterAnimate.astro";
 ---
 
-<MainLayout title={'Saint Levant | Home'}>
+<MainLayout title={"Saint Levant | Home"}>
   <div class="cover" aria-label="Cover for the web page">
-    <p class="cool sub-header">
+    <LetterAnimate tagType="span" class="cool sub-header">
       <span data-text="from">from</span>
       <span data-text="gaza">gaza</span>
       <span data-text="with">with</span>
       <span data-text="love">love</span>
-    </p>
+    </LetterAnimate>
     <LetterAnimate tagType="h1" class="cool">
       <span data-text="saint"> saint</span>
       <span data-text="levant"> levant</span>
@@ -45,7 +45,8 @@ import LetterAnimate from '../components/LetterAnimate.astro';
 
     .sub-header {
       text-transform: capitalize;
-      font-style: italic;
+      font-size: 1.3rem;
+      // font-style: italic;
     }
     img {
       aspect-ratio: 9/16;
