@@ -2,20 +2,20 @@
 // footer links
 const FOOTER_LINKS = [
   {
-    name: 'Instagram',
-    link: 'https://www.instagram.com/saintlevant',
+    name: "Instagram",
+    link: "https://www.instagram.com/saintlevant",
   },
   {
-    name: 'TikTok',
-    link: '/music/',
+    name: "TikTok",
+    link: "/music/",
   },
   {
-    name: 'youtube',
-    link: '/posts/',
+    name: "youtube",
+    link: "/posts/",
   },
   {
-    name: 'spotify',
-    link: '/posts/',
+    name: "spotify",
+    link: "/posts/",
   },
 ];
 ---
@@ -32,28 +32,26 @@ const FOOTER_LINKS = [
       ))
     }
   </ul>
-  <div class="copyright">
-    <small
-      >Copyright &copy; all right reserved 2023. Yefree De Los Santos Valdez.</small
-    >
-  </div>
+  <small
+    >Copyright &copy; all right reserved 2023. Yefree De Los Santos Valdez.</small
+  >
 </footer>
 
 <style lang="scss">
   footer {
-    display: flex;
     flex-direction: column;
+    gap: 3rem;
     text-align: center;
-    gap: 0.5em;
-    color: var(--clr-text);
     ul {
+      flex: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
     }
     li {
       flex: 1;
+    }
+    small {
+      display: block;
+      color: var(--clr-text);
     }
   }
 </style>

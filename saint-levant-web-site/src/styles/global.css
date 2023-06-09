@@ -109,6 +109,12 @@ p {
   filter: blur(.3rem) grayscale(100%);
 }
 
+header,
+footer {
+  display: flex;
+  padding: 1rem;
+}
+
 .main {
   position: relative;
   display: grid;
